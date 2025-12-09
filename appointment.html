@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prendre rendez-vous avec notre cabinet d'avocat">
+    <title>Rendez-vous - Cabinet d'Avocat</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/appointment.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-scales"></i>
+                        <span>Cabinet Juridique</span>
+                    </a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html" class="active">Rendez-vous</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Prendre Rendez-vous</h1>
+            <p>Réservez votre consultation gratuite en quelques clics</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="appointment-section">
+            <div class="container">
+                <div class="appointment-grid">
+                    <!-- Form -->
+                    <div class="appointment-form fade-in-left">
+                        <h2>Formulaire de Rendez-vous</h2>
+                        <form id="appointmentForm" class="form">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">Nom Complet *</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" placeholder="votre.email@exemple.com"
+                                    required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+33 1 23 45 67 89" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group">
+                                <label for="subject">Sujet de la Consultation *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="civil">Droit Civil</option>
+                                    <option value="penal">Droit Pénal</option>
+                                    <option value="immobilier">Droit Immobilier</option>
+                                    <option value="familial">Droit Familial</option>
+                                    <option value="commercial">Droit Commercial</option>
+                                    <option value="administratif">Droit Administratif</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <!-- Preferred Date -->
+                            <div class="form-group">
+                                <label for="date">Date Préférée *</label>
+                                <input type="date" id="date" name="date" required>
+                                <span class="error-message" id="dateError"></span>
+                            </div>
+
+                            <!-- Preferred Time -->
+                            <div class="form-group">
+                                <label for="time">Heure Préférée *</label>
+                                <input type="time" id="time" name="time" required>
+                                <span class="error-message" id="timeError"></span>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Description de votre Situation</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Décrivez brièvement votre situation juridique" rows="5"></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">
+                                    J'accepte les conditions d'utilisation et la politique de confidentialité *
+                                </label>
+                                <span class="error-message" id="agreeError"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-calendar-check"></i>
+                                Confirmer le Rendez-vous
+                            </button>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="success-message" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Votre rendez-vous a été demandé avec succès! Nous vous recontacterons sous peu.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="appointment-info fade-in-right">
+                        <div class="info-card">
+                            <h3>Information Importante</h3>
+                            <p>
+                                Veuillez remplir le formulaire ci-contre pour demander un rendez-vous.
+                                Nous vous contactera dans les 24 heures pour confirmer votre créneau.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-clock"></i> Horaires</h3>
+                            <div class="hours">
+                                <p><strong>Lundi - Vendredi:</strong><br>9:00 - 18:00</p>
+                                <p><strong>Samedi:</strong><br>10:00 - 13:00</p>
+                                <p><strong>Dimanche:</strong><br>Fermé</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-phone"></i> Assistance Directe</h3>
+                            <p>Si vous préférez nous contacter directement :</p>
+                            <p>
+                                <a href="tel:+33123456789" class="contact-link">
+                                    <i class="fas fa-phone-alt"></i>
+                                    +33 1 23 45 67 89
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:contact@cabinetjuridique.fr" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                    contact@cabinetjuridique.fr
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3><i class="fas fa-map-marker-alt"></i> Localisation</h3>
+                            <p>
+                                123 Rue de la Justice<br>
+                                75001 Paris<br>
+                                France
+                            </p>
+                        </div>
+
+                        <div class="info-card info-card-highlight">
+                            <h3><i class="fas fa-gift"></i> Première Consultation</h3>
+                            <p><strong>Gratuite et sans engagement!</strong></p>
+                            <p>Votre première consultation est entièrement gratuite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Questions Fréquemment Posées</h2>
+                <div class="faq-grid">
+                    <div class="faq-item fade-in-up">
+                        <h3>La première consultation est-elle gratuite?</h3>
+                        <p>
+                            Oui, votre première consultation est entièrement gratuite et sans engagement.
+                            C'est une occasion pour nous de comprendre votre situation et vous proposer les meilleures
+                            solutions.
+                        </p>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <h3>Combien de temps dure une consultation?</h3>
+                        <p>
+                            Une première consultation dure généralement entre 30 et 60 minutes,
+                            selon la complexité de votre situation juridique.
+                        </p>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <h3>Puis-je annuler ou reprogrammer mon rendez-vous?</h3>
+                        <p>
+                            Bien sûr! Veuillez nous contacter au moins 24 heures avant votre rendez-vous
+                            pour l'annuler ou le reprogrammer.
+                        </p>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <h3>Où est situé le cabinet?</h3>
+                        <p>
+                            Notre cabinet est situé au 123 Rue de la Justice, 75001 Paris.
+                            Nous sommes facilement accessible par les transports en commun.
+                        </p>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <h3>Proposez-vous des consultations en ligne?</h3>
+                        <p>
+                            Oui, nous proposons des consultations vidéo pour votre commodité.
+                            Précisez-le dans le formulaire ou contactez-nous directement.
+                        </p>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <h3>Quels sont vos tarifs?</h3>
+                        <p>
+                            Nos tarifs varient selon le type de service et la complexité de l'affaire.
+                            Nous discuterons des honoraires lors de votre première consultation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cabinet Juridique</h4>
+                    <p>Votre partenaire de confiance pour tous vos besoins juridiques. Excellence, intégrité et
+                        professionnalisme.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-Nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cabinet Juridique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/appointment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+/* ============================================
+   SERVICES PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   SERVICES DETAILED SECTION
+   ============================================ */
+
+.services-detailed {
+    background-color: white;
+}
+
+.service-detail-card {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-detail-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+}
+
+.service-detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.service-detail-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a8c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.service-detail-header>div:nth-child(2) {
+    flex: 1;
+}
+
+.service-detail-header h2 {
+    margin-bottom: 8px;
+    color: #1a365d;
+}
+
+.price-tag {
+    display: inline-block;
+    background: #d4af37;
+    color: #1a365d;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.service-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.service-detail-card h4 {
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.service-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.service-list li {
+    color: #666;
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.service-list li:before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+}
+
+.service-detail-card .btn {
+    margin-top: 20px;
+}
+
+/* ============================================
+   PROCESS SECTION
+   ============================================ */
+
+.process-section {
+    background-color: #f5f7fa;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    position: relative;
+}
+
+.process-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #d4af37 25%, #d4af37 75%, transparent 100%);
+    display: none;
+}
+
+.process-step {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #d4af37;
+    color: #1a365d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.process-step h3 {
+    color: #1a365d;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.process-step p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.cta-section {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a8c 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 30px;
+    }
+
+    .service-detail-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        border-bottom: none;
+    }
+
+    .service-detail-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid::before {
+        display: none !important;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-detailed {
+        padding: 50px 0;
+    }
+
+    .service-detail-card {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .service-detail-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .price-tag {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+    }
+
+    .process-step {
+        padding: 30px 20px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+}

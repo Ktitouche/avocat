@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez notre cabinet d'avocat - Nous sommes à votre écoute">
+    <title>Contact - Cabinet d'Avocat</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-scales"></i>
+                        <span>Cabinet Juridique</span>
+                    </a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Rendez-vous</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Nous Contacter</h1>
+            <p>Vos questions nous intéressent. Contactez-nous dès maintenant</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form fade-in-left">
+                        <h2>Formulaire de Contact</h2>
+                        <form id="contactForm" class="form">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="contactName">Nom Complet *</label>
+                                <input type="text" id="contactName" name="name" placeholder="Votre nom complet"
+                                    required>
+                                <span class="error-message" id="contactNameError"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="contactEmail">Email *</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="votre.email@exemple.com"
+                                    required>
+                                <span class="error-message" id="contactEmailError"></span>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label for="contactPhone">Téléphone</label>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="+33 1 23 45 67 89">
+                                <span class="error-message" id="contactPhoneError"></span>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group">
+                                <label for="contactSubject">Sujet *</label>
+                                <input type="text" id="contactSubject" name="subject"
+                                    placeholder="Objet de votre message" required>
+                                <span class="error-message" id="contactSubjectError"></span>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" name="message" placeholder="Votre message ici..." rows="6"
+                                    required></textarea>
+                                <span class="error-message" id="contactMessageError"></span>
+                            </div>
+
+                            <!-- Privacy Checkbox -->
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="contactAgree" name="agree" required>
+                                <label for="contactAgree">
+                                    J'accepte la politique de confidentialité *
+                                </label>
+                                <span class="error-message" id="contactAgreeError"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer le Message
+                            </button>
+
+                            <!-- Success Message -->
+                            <div id="contactSuccessMessage" class="success-message" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Votre message a été envoyé avec succès! Nous vous recontacterons sous peu.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info fade-in-right">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Adresse</h3>
+                            <p>
+                                123 Rue de la Justice<br>
+                                75001 Paris<br>
+                                France
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Téléphone</h3>
+                            <p>
+                                <a href="tel:+33123456789">+33 1 23 45 67 89</a><br>
+                                <a href="tel:+33123456790">+33 1 23 45 67 90</a>
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:contact@cabinetjuridique.fr">contact@cabinetjuridique.fr</a><br>
+                                <a href="mailto:info@cabinetjuridique.fr">info@cabinetjuridique.fr</a>
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Horaires d'Ouverture</h3>
+                            <div class="hours">
+                                <p><strong>Lundi - Vendredi:</strong><br>9:00 - 18:00</p>
+                                <p><strong>Samedi:</strong><br>10:00 - 13:00</p>
+                                <p><strong>Dimanche:</strong><br>Fermé</p>
+                                <p class="urgent-notice">
+                                    <strong>Urgence:</strong> Contactez-nous par téléphone
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card info-card-highlight">
+                            <h3><i class="fas fa-comments"></i> Assistance</h3>
+                            <p>Nous répondons généralement dans les 2 heures de votre message durant les heures de
+                                bureau.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Localisation</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9893844628903!2d2.3522219!3d48.8566140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2s123%20Rue%20de%20la%20Justice%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
+                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-us-section">
+            <div class="container">
+                <h2 class="section-title">Pourquoi Nous Choisir</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-card fade-in-up">
+                        <i class="fas fa-star"></i>
+                        <h3>Excellence Professionnelle</h3>
+                        <p>Plus de 15 ans d'expertise avec un taux de satisfaction de 98%.</p>
+                    </div>
+                    <div class="why-us-card fade-in-up">
+                        <i class="fas fa-shield"></i>
+                        <h3>Confidentiel</h3>
+                        <p>Secret professionnel absolument respecté en toutes circonstances.</p>
+                    </div>
+                    <div class="why-us-card fade-in-up">
+                        <i class="fas fa-headset"></i>
+                        <h3>Disponibilité</h3>
+                        <p>Toujours à l'écoute et réactif à vos besoins juridiques.</p>
+                    </div>
+                    <div class="why-us-card fade-in-up">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Approche Personnalisée</h3>
+                        <p>Solutions sur mesure adaptées à votre situation spécifique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Cabinet Juridique</h4>
+                    <p>Votre partenaire de confiance pour tous vos besoins juridiques. Excellence, intégrité et
+                        professionnalisme.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-Nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cabinet Juridique. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
